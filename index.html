@@ -48,11 +48,11 @@
                         <ul class="nav navbar-nav">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li class="hidden"> <a href="#page-top"></a> </li>
-                        <li> <a class="page-scroll" href="#about">About</a> </li>
-                        <li> <a class="page-scroll" href="#skills">Skills</a> </li>
-                        <li> <a class="page-scroll" href="#portfolio">Portfolio</a> </li>
-                        <li> <a class="page-scroll" href="#history">History</a> </li>
-                        <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+                        <li> <a class="page-scroll smoothScroll" href="#about">About</a> </li>
+                        <li> <a class="page-scroll smoothScroll" href="#skills">Skills</a> </li>
+                        <li> <a class="page-scroll smoothScroll" href="#portfolio">Portfolio</a> </li>
+                        <li> <a class="page-scroll smoothScroll" href="#history">History</a> </li>
+                        <li> <a class="page-scroll smoothScroll" href="#contact">Contact</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
     </div>
 
     <!-- About Section -->
-    <div id="about">
+    <div id="about" class="sr1">
         <div class="container">
             <div class="section-title text-center center">
             <h2>About Me</h2>
@@ -88,31 +88,31 @@
                 <hr>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>HTML5/CSS3</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>SQL</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>JQuery</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>PHP</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>C++</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>Java</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>Agile Methodologies</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>Git</h4>
                 </div>
-                <div class="col-md-4 col-sm-6 skill">
+                <div class="col-md-4 col-sm-6 skill sr2">
                     <h4>MVC Frameworks</h4>
                 </div>
             </div>
@@ -120,7 +120,7 @@
     </div>
 
     <!-- Portfolio Section -->
-    <div id="portfolio">
+    <div id="portfolio" class="sr1">
         <div class="container">
             <div class="section-title text-center center">
                 <h2>Portfolio</h2>
@@ -183,7 +183,7 @@
 
     <!-- History Section -->
     <div id="history" class="text-center">
-        <div class="container">
+        <div class="container sr1">
             <div class="section-title text-center center">
                 <h2>History</h2>
                 <hr>
@@ -196,7 +196,7 @@
                     <ul class="timeline">
                         
                         <!-- PhD -->
-                        <li>
+                        <li class="sr1">
                             <div class="timeline-image">
                                 <h4>Present<br /> - <br />Jan 2017</h4>
                             </div>
@@ -212,7 +212,7 @@
                         </li>
 
                         <!-- Lexis Nexis -->
-                        <li>
+                        <li class="sr1">
                             <div class="timeline-image">
                                 <h4>Dec 2016<br /> - <br />May 2016</h4>
                             </div>
@@ -228,7 +228,7 @@
                         </li>
 
                         <!-- BSc Degree -->
-                        <li>
+                        <li class="sr1">
                             <div class="timeline-image">
                                 <h4>May 2016<br /> - <br />Sep 2014</h4>
                             </div>
@@ -244,7 +244,7 @@
                         </li>
         
                         <!-- College -->
-                        <li>
+                        <li class="sr1">
                             <div class="timeline-image">
                                 <h4>Jun 2014<br /> - <br />Sep 2012</h4>
                             </div>
@@ -271,7 +271,7 @@
     </script>
 
     <!-- Contact Section -->
-    <div id="contact" class="text-center">
+    <div id="contact" class="text-center sr1">
         <div class="container">
 
             <div class="section-title center">
@@ -333,6 +333,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Smooth scrolling -->
+    <script src="./res/js/smoothscroll.js"></script>
+
+    <!-- Fade in elements with scrollreveal https://github.com/jlmakes/scrollreveal -->
+    <script src="./res/js/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.sr1');
+        sr.reveal('.sr2', 100);
+    </script>
 
 </body>
 </html>

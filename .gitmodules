@@ -1,0 +1,3 @@
+[submodule "res/CV"]
+	path = res/CV
+	url = http://github.com/rhydianjenkins/CV.git

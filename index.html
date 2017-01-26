@@ -18,14 +18,16 @@
 <script src="./res/js/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="./res/js/bootstrap.min.js"></script>
+<!-- Particles.js -->
+<script src="./res/js/particles.js"></script>
 <!-- Favicon-->
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+    
     <!-- Header -->
     <header id="header">
-        <div class="intro">
+        <div id="particles-js" class="intro">
             <div class="container">
                 <div class="row">
                     <div class="intro-text">
@@ -36,7 +38,12 @@
             </div>
         </div>
     </header>
-
+    <script>
+        particlesJS.load('particles-js', '.res/js/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+    
     <!-- Navigation -->
     <div id="nav">
         <nav class="navbar navbar-custom">
@@ -48,13 +55,13 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                         <ul class="nav navbar-nav">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden"> <a href="#page-top" class="smoothScroll"></a> </li>
-                        <li> <a class="page-scroll smoothScroll" href="#about">About</a> </li>
-                        <li> <a class="page-scroll smoothScroll" href="#skills">Skills</a> </li>
-                        <li> <a class="page-scroll smoothScroll" href="#portfolio">Portfolio</a> </li>
-                        <li> <a class="page-scroll smoothScroll" href="#history">History</a> </li>
-                        <li> <a class="page-scroll smoothScroll" href="#contact">Contact</a> </li>
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden"> <a href="#page-top" class="smoothScroll"></a> </li>
+                            <li> <a class="page-scroll smoothScroll" href="#about">About</a> </li>
+                            <li> <a class="page-scroll smoothScroll" href="#skills">Skills</a> </li>
+                            <li> <a class="page-scroll smoothScroll" href="#portfolio">Portfolio</a> </li>
+                            <li> <a class="page-scroll smoothScroll" href="#history">History</a> </li>
+                            <li> <a class="page-scroll smoothScroll" href="#contact">Contact</a> </li>
                         </ul>
                     </div>
                 </div>

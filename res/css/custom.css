@@ -620,6 +620,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	outline: none;
 	outline-offset: none;
 }
+.intro-text {
+	background-color: #7bc3d1;
+}
 /* Media Queries */
 @media(min-width:768px) {
     .intro {

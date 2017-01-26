@@ -320,7 +320,7 @@
             <div class="col-md-8 col-md-offset-2">
 
                 <h3>Leave me a message</h3>
-                <form action="mailto:rhydz@msn.com" method="post" enctype="text/plain" name="sentMessage" id="contactForm">
+                <form id="contact" name="sentMessage" id="contactForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -339,9 +339,49 @@
                         <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
-                    <div id="success"></div>
-                    <button type="submit" class="btn btn-default">Send Message</button>
+                    <button id="submit" type="submit" class="btn btn-default" name="submit" type="submit" value="Send">Send Message</button>
                 </form>
+                <div id="success" style="display: none;"><p>Thanks for the message.</div>
+                <script>
+                    $(function() {
+                        $("#contact #submit").click(function(e) {
+                            
+                            e.preventDefault();
+                            
+                            /*
+                            var data = {
+                                name: $("#name").val(),
+                                email: $("#email").val(),
+                                message: $("#message").val()
+                            };
+                            $.ajax({
+                                type: "POST",
+                                url: "./res/php/email.php",
+                                data: data,
+                                success: function(response) {
+                                    $('.contact').fadeOut(1000);
+                                    $('.success').fadeIn(1000);
+                                    console.log('Success: ' + response);
+                                }
+                            });
+                            */
+                            if (checkPhp()) {
+                                console.log("PHP supported. Sending user email via PHP script.");
+                            } else {
+                                console.log("PHP unsupported. Sending user to email program.");
+                            }
+                            
+                        });
+                    });
+
+                    function checkPhp() {
+                        xmlHttp = new XMLHttpRequest();
+                        xmlHttp.open("GET", "./res/php/test.php", false );
+                        xmlHttp.send(false);
+                        console.log(xmlHttp.responseText);
+                        return false;
+                    }
+                </script>
 
                 <div class="social">
                     <ul>

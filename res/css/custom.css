@@ -43,6 +43,10 @@ a:hover, a:focus {
 	text-decoration: none;
 	color: #7bc3d1;
 }
+.no-style-link:hover {
+	text-decoration: none;
+	color: #121d1f;
+}
 ul, ol {
 	list-style: none;
 }
